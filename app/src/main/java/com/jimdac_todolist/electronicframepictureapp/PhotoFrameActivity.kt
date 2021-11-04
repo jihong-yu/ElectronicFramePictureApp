@@ -50,7 +50,7 @@ class PhotoFrameActivity : AppCompatActivity() {
     }
 
     //timer - 일정한 시간을 주기로 반복 동작을 수행할때 쓰는 기능 ( 반복주기 속성 'period')
-    //백그라운드로 실행되기 때문에 UI 조작x
+    //비동기로 실행되기 때문에 UI 조작x
     private fun startTimer() {
         //5초마다 계속해서 실행(단, 타이머는 백그라운드에서도 계속해서 실행이됨)
         timer = timer(period = 5 * 1000L) {

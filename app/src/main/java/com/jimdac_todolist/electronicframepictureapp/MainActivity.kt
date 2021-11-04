@@ -62,7 +62,8 @@ class MainActivity : AppCompatActivity() {
         //전자액자 실행하기 버튼 클릭 리스너
         initStartPhotoFrameModeButton()
     }
-
+    
+    //전자액자 실행하기 버튼 클릭시 PhotoFrameActivity로 이미지 Uri를 넘겨줌
     private fun initStartPhotoFrameModeButton() {
         startPhotoFrameModeButton.setOnClickListener { 
             if(imageUriList.size == 0){
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    ////사진추가하기 버튼 클릭 리스너 등록 메서드
+    //사진추가하기 버튼 클릭 리스너 등록 메서드
     private fun initAddPhotoButton() {
         addPhotoButton.setOnClickListener {
             when {
@@ -145,7 +146,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
+    // 이미지를 클릭한 후에 실행되는 메서드
     private fun imageLoadingActivityResult(result: ActivityResult) {
         //todo 결과가 정상적으로 전달이 된다면 실행
         if (result.resultCode == Activity.RESULT_OK) {
